@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PROJECTS from "./data/projects";
+import PROJECTS from "../data/projects";
 
 class Project extends Component {
     render(){
@@ -7,9 +7,9 @@ class Project extends Component {
         return(
             <div style={{ display:"inline-block" }}>
                 <h3>{ title }</h3>
-                <img src={ img } style={{ width:200, height:100 }} />
+                <img src={ img } alt={ title } style={{ width:200, height:100 }} />
                 <br />
-                <a href={ link } target="_blank">Ir a GitHub</a>
+                <a href={ link } target="_blank"  rel="noreferrer">Ir a GitHub</a>
             </div>
             /* <div>{ this.props.project.title }></div> */
         )

@@ -1,6 +1,11 @@
 import React, { Component } from "react";
-import Projects from './Projects.js';
-import SocialProfiles from './SocialProfiles.js';
+import { Link } from 'react-router-dom';
+import Header from "./Header";
+import Projects from './Projects';
+/* import Title from './Title.js';
+import Jokes from './Jokes.js';
+import SocialProfiles from './SocialProfiles.js'; */
+
 
 class App extends Component {
   state = { displayBio: false };
@@ -29,15 +34,20 @@ class App extends Component {
     ); */
     return(
       <div>
+        <Link to="/"/>
+        <Header />
+        
         <h1>Mi nombre</h1>
+        
         <p>descipcion de la persona</p>
+        
         <p>objetivos</p>
         {
           this.state.displayBio ? (
             <div>
               <p>mas texto</p>
               <p>#opentowork</p>
-              {/* <SocialProfiles /> */}
+              
               <button onClick={this.toggleDisplayBio}>Read less</button>
             </div>
           ):(
@@ -49,36 +59,9 @@ class App extends Component {
         }
         <hr />
         <Projects />
-        
       </div>
     )
   }
 }
 
 export default App;
-
-/* import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App; */

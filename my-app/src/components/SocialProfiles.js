@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import SOCIALPROFILES from "./data/socialProfiles";
+import SOCIALPROFILES from "../data/socialProfiles";
 
 class SocialProfile extends Component {
     render(){
         const { title, link } = this.props.socialProfiles;
         return(
             <div>
-                <a href={ link } target="_blank">{ title }</a>
+                <a href={ link } target="_blank" rel="noreferrer">{ title }</a>
             </div>
         )
     }
